@@ -1,0 +1,30 @@
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.hover-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+}
+
+.bounce-on-hover:hover {
+  animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-10px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.skill-glow:hover {
+  box-shadow: 0 0 20px var(--glow-color), 0 0 10px var(--glow-color);
+  border: 1px solid var(--glow-color);
+}
