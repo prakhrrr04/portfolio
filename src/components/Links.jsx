@@ -79,6 +79,17 @@ export default function Links() {
           {cpLinks.map(renderFlipCard)}
         </div>
       </section>
+      <footer style={{
+            textAlign: 'center',
+            fontSize: '0.85rem',
+            color: '#6b7280',
+            padding: '2rem 0 0.5rem',
+            borderTop: '1px solid #e5e7eb',
+            marginTop: '3rem',
+          }}
+        >
+          © {new Date().getFullYear()} Prakhar Singh. All rights reserved.
+        </footer>
     </div>
   );
 }

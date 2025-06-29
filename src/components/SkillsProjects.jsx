@@ -104,34 +104,96 @@ export default function SkillsProjects() {
               <div style={{ marginBottom: '1rem' }}>
                 <strong style={{ fontSize: '0.9rem', color: '#333' }}>Tech Stack:</strong>
                 <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem' }}>
-                  {proj.icons.map((icon, i) => (
-                    <div key={i} style={{ fontSize: '1.2rem', color: '#444' }}>
-                      {icon}
-                    </div>
+                  {proj.techStack.map((tech, i) => (
+                    <span
+                      key={i}
+                      style={{
+                        fontSize: '0.75rem',
+                        padding: '0.25rem 0.5rem',
+                        backgroundColor: '#f3f4f6',
+                        color: '#1f2937',
+                        borderRadius: '9999px',
+                        fontWeight: 500,
+                        boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                      }}
+                    >
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </div>
 
               {/* GitHub Link */}
               {proj.github && (
-                <a
-                  href={proj.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    display: 'inline-block',
-                    fontSize: '0.85rem',
-                    color: '#3182ce',
-                    textDecoration: 'underline',
-                  }}
-                >
-                  🔗 View GitHub Repo
-                </a>
+              <a
+                href={proj.github}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: 'inline-block',
+                  fontSize: '0.75rem',
+                  padding: '0.35rem 0.75rem',
+                  backgroundColor: '#f5f5f5',
+                  color: '#333',
+                  borderRadius: '0.5rem',
+                  fontWeight: 500,
+                  border: '1px solid #d1d5db',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease',
+                  marginTop: '0.5rem',
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = '#333';
+                  e.target.style.color = '#fff';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = '#f5f5f5';
+                  e.target.style.color = '#333';
+                }}
+              >
+                🔗 View GitHub Repo
+              </a>
               )}
             </div>
           ))}
         </div>
       </section>
+      <footer style={{
+            textAlign: 'center',
+            fontSize: '0.85rem',
+            color: '#6b7280',
+            padding: '2rem 0 0.5rem',
+            borderTop: '1px solid #e5e7eb',
+            marginTop: '3rem',
+          }}
+        >
+          © {new Date().getFullYear()} Prakhar Singh. All rights reserved.
+          <p style={{ marginTop: '0.5rem' }}>
+            <a
+              href="https://github.com/prakhrrr04"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                color: '#6b7280',
+                textDecoration: 'none',
+                marginRight: '1rem',
+              }}
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/prakhar-singh-23703628b"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                color: '#6b7280',
+                textDecoration: 'none',
+              }}
+            >
+              LinkedIn
+            </a>
+          </p>
+        </footer>
     </div>
   );
 }

@@ -40,10 +40,12 @@ export default function Home() {
       icon: <FaCode size={28} />,
       color: '#6e5494',
     },
-    { name: 'NumPy', icon: <FaPython size={28} />, color: '#013243' },
-    { name: 'pandas', icon: <FaPython size={28} />, color: '#150458' },
-    { name: 'matplotlib', icon: <FaPython size={28} />, color: '#11557c' },
-    { name: 'PuLP (Optimization)', icon: <FaPython size={28} />, color: '#004b87' },
+    { name: 'NumPy', icon: <img src="src/assets/numpy.svg" alt="NumPy" style={{ width: 28, height: 28 }} />
+, color: '#013243' },
+    { name: 'Pandas', icon: <img src="src/assets/pandas.svg" alt="pandas" style={{ width: 28, height: 28 }} />, color: '#150458' },
+    { name: 'StreamLit', icon: <img src="src/assets/streamlit.svg" alt="StreamLit" style={{ width: 28, height: 28 }} />, color: '#11557c' },
+    { name: 'PuLP (Optimization)', icon: <img src="src/assets/pulp.png" alt="PuLP" style={{ width: 28, height: 28 }} />, color: '#004b87' },
+
   ];
 
   return (
@@ -79,6 +81,60 @@ export default function Home() {
         <blockquote style={{ fontStyle: 'italic', color: '#888', marginTop: '1rem' }}>
           "Code is like humor. When you have to explain it, it’s bad."
         </blockquote>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '1.5rem',
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
+            marginTop: '2rem',
+            border: '1px solid #e5e7eb',
+            padding: '1.5rem',
+            borderRadius: '10px',
+            backgroundColor: '#f9fafb',
+          }}
+        >
+          <ul
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+              color: '#4b5563',
+              fontSize: '0.95rem',
+              lineHeight: '1.6',
+              flex: 1,
+              minWidth: '250px',
+            }}
+          >
+            <li>• 300+ problems solved on Codeforces & LeetCode</li>
+            <li>• Built 5+ real-world projects (React, Firebase, Node.js)</li>
+            <li>• Passionate about optimization, DSA, and system design</li>
+          </ul>
+
+          <div style={{ minWidth: '180px', textAlign: 'center' }}>
+            <a
+              href="https://drive.google.com/your_resume_link"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: 'inline-block',
+                fontSize: '0.95rem',
+                fontWeight: '500',
+                color: '#ffffff',
+                backgroundColor: '#1f2937',
+                padding: '0.65rem 1.25rem',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease',
+              }}
+              onMouseEnter={(e) => (e.target.style.backgroundColor = '#111827')}
+              onMouseLeave={(e) => (e.target.style.backgroundColor = '#1f2937')}
+            >
+              📄 View My Resume
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Skills Section */}
@@ -163,15 +219,168 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section style={{ paddingTop: '2rem', textAlign: 'center' }} data-aos="fade-up">
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>🚀 Let’s Connect</h2>
-        <p style={{ fontSize: '1rem', color: '#666', marginBottom: '1.5rem' }}>
-          Whether it’s about internships, collaboration, or cool ideas — I’d love to chat!
+      <section
+        style={{
+          padding: '3rem 0',
+          textAlign: 'center',
+          backgroundColor: '#ffffff',
+        }}
+        data-aos="fade-up"
+      >
+        <h2
+          style={{
+            fontSize: '1.75rem',
+            fontWeight: 'bold',
+            marginBottom: '2rem',
+            color: '#1f2937',
+          }}
+        >
+          🌟 Featured Projects
+        </h2>
+
+        <div
+          style={{
+            display: 'grid',
+            gap: '1.5rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          }}
+        >
+          {[
+            {
+              title: 'HealStay',
+              desc: 'A React + Firebase platform that helps families find affordable stays near hospitals.',
+              link: 'https://github.com/prakhrrr04/healstay',
+            },
+            {
+              title: 'EV Charging Optimizer',
+              desc: 'Python + PuLP optimization model to simulate efficient charging schedules for multiple EVs.',
+              link: 'https://github.com/prakhrrr04/ev-charging-hub',
+            },
+            {
+              title: 'Codeforces Rank Watcher',
+              desc: 'Chrome extension to track friends overtaking your CF rank during live or virtual contests.',
+              link: 'https://github.com/prakhrrr04/codeforces-rank-watcher',
+            },
+          ].map(({ title, desc, link }) => (
+            <div
+              className="card hover-card card-hover-clean"
+              key={title}
+              style={{
+                textAlign: 'left',
+                padding: '1.5rem',
+                backgroundColor: '#f9fafb',
+              }}
+            >
+              <h3 style={{ fontSize: '1.2rem', fontWeight: '600', marginBottom: '0.5rem' }}>
+                {title}
+              </h3>
+              <p style={{ fontSize: '0.95rem', color: '#555', marginBottom: '1rem' }}>{desc}</p>
+              <a
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  fontSize: '0.9rem',
+                  color: '#3182ce',
+                  textDecoration: 'underline',
+                }}
+              >
+                🔗 View GitHub Repo
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section style={{
+          paddingTop: '3rem',
+          paddingBottom: '2rem',
+          textAlign: 'center',
+          backgroundColor: '#f9fafb',
+        }}
+        data-aos="fade-up"
+      >
+        <h2 style={{
+            fontSize: '2rem',
+            fontWeight: '600',
+            color: '#1f2937',
+            marginBottom: '0.75rem',
+          }}
+        >
+          Let’s Connect
+        </h2>
+        <p style={{
+            fontSize: '1rem',
+            color: '#4b5563',
+            maxWidth: '600px',
+            margin: '0 auto 1.75rem auto',
+            lineHeight: '1.6',
+          }}
+        >
+          Open to internship opportunities, collaborations, or meaningful conversations. Feel free to reach out!
         </p>
-        <a href="/contact" className="btn">
+        <a href="/contact"
+          style={{
+            display: 'inline-block',
+            padding: '0.65rem 1.5rem',
+            fontSize: '0.95rem',
+            fontWeight: '500',
+            color: '#ffffff',
+            backgroundColor: '#1f2937',
+            borderRadius: '8px',
+            textDecoration: 'none',
+            transition: 'all 0.2s ease',
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = '#111827';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = '#1f2937';
+          }}
+        >
           Contact Me
         </a>
+
+        {/* Footer */}
+        <footer style={{
+            textAlign: 'center',
+            fontSize: '0.85rem',
+            color: '#6b7280',
+            padding: '2rem 0 0.5rem',
+            borderTop: '1px solid #e5e7eb',
+            marginTop: '3rem',
+          }}
+        >
+          © {new Date().getFullYear()} Prakhar Singh. All rights reserved.
+          <p style={{ marginTop: '0.5rem' }}>
+            <a
+              href="https://github.com/prakhrrr04"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                color: '#6b7280',
+                textDecoration: 'none',
+                marginRight: '1rem',
+              }}
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/prakhar-singh-23703628b"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                color: '#6b7280',
+                textDecoration: 'none',
+              }}
+            >
+              LinkedIn
+            </a>
+          </p>
+        </footer>
       </section>
+
+
     </div>
   );
 }

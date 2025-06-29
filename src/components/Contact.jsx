@@ -29,11 +29,11 @@ export default function Contact() {
 
   return (
     <div className="container" data-aos="fade-up">
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '2rem' }}>📬 Contact Me</h1>
+      <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '2rem' }}> Contact Me</h1>
 
       <div className="grid-two-cols">
         <div className="card" data-aos="fade-right">
-          <h2 style={{ marginBottom: '1rem' }}>Send me a message 💬</h2>
+          <h2 style={{ marginBottom: '1rem' }}>Send me a message </h2>
           <form ref={form} onSubmit={sendEmail} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <input
               type="text"
@@ -70,15 +70,15 @@ export default function Contact() {
                 transition: 'background 0.3s ease',
               }}
             >
-              📨 Send Message
+              Send Message
             </button>
             {sent && <p style={{ color: 'green' }}>✅ Message sent successfully!</p>}
           </form>
         </div>
 
         <div className="card" data-aos="fade-left">
-          <h2 style={{ marginBottom: '1.5rem' }}>Other Ways to Reach Me 🌐</h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <h2 style={{ marginBottom: '1.5rem' }}>Other Ways to Reach Me</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '70%', gap: '10px'}}>
             <a
               className="bounce-on-hover"
               href="mailto:prakhrrr.2004@gmail.com"
@@ -109,6 +109,17 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <footer style={{
+            textAlign: 'center',
+            fontSize: '0.85rem',
+            color: '#6b7280',
+            padding: '2rem 0 0.5rem',
+            borderTop: '1px solid #e5e7eb',
+            marginTop: '3rem',
+          }}
+        >
+          © {new Date().getFullYear()} Prakhar Singh. All rights reserved.
+        </footer>
     </div>
   );
 }
@@ -116,16 +127,20 @@ export default function Contact() {
 const linkStyle = {
   display: 'flex',
   alignItems: 'center',
-  gap: '12px',
+  gap: '16px',
   textDecoration: 'none',
   color: '#1f2937',
-  fontWeight: '500',
+  fontWeight: '600',
   backgroundColor: '#f9fafb',
-  padding: '0.75rem 1rem',
-  borderRadius: '8px',
+  padding: '1.25rem 1.5rem',
+  borderRadius: '10px',
   border: '1px solid #e5e7eb',
+  fontSize: '1.05rem',
+  flexGrow: 1,
+  justifyContent: 'flex-start',
   transition: 'all 0.3s ease',
 };
+
 
 const textSpan = {
   fontSize: '1rem',
