@@ -14,6 +14,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './components.css';
 import { TypeAnimation } from 'react-type-animation';
+import pandas from '../assets/pandas.svg';
+import numpy from '../assets/numpy.svg';
+import streamlit from '../assets/streamlit.svg'; 
+import pulp from '../assets/pulp.png';
+
+
 
 
 export default function Home() {
@@ -40,11 +46,11 @@ export default function Home() {
       icon: <FaCode size={28} />,
       color: '#6e5494',
     },
-    { name: 'NumPy', icon: <img src="src/assets/numpy.svg" alt="NumPy" style={{ width: 28, height: 28 }} />
+    { name: 'NumPy', icon: <img src={numpy} alt="NumPy" style={{ width: 28, height: 28 }} />
 , color: '#013243' },
-    { name: 'Pandas', icon: <img src="src/assets/pandas.svg" alt="pandas" style={{ width: 28, height: 28 }} />, color: '#150458' },
-    { name: 'StreamLit', icon: <img src="src/assets/streamlit.svg" alt="StreamLit" style={{ width: 28, height: 28 }} />, color: '#11557c' },
-    { name: 'PuLP (Optimization)', icon: <img src="src/assets/pulp.png" alt="PuLP" style={{ width: 28, height: 28 }} />, color: '#004b87' },
+    { name: 'Pandas', icon: <img src={pandas} alt="pandas" style={{ width: 28, height: 28 }} />, color: '#150458' },
+    { name: 'StreamLit', icon: <img src={streamlit} alt="StreamLit" style={{ width: 28, height: 28 }} />, color: '#11557c' },
+    { name: 'PuLP (Optimization)', icon: <img src={pulp} alt="PuLP" style={{ width: 28, height: 28 }} />, color: '#004b87' },
 
   ];
 
