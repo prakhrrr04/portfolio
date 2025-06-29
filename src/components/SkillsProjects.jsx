@@ -168,31 +168,6 @@ export default function SkillsProjects() {
           }}
         >
           © {new Date().getFullYear()} Prakhar Singh. All rights reserved.
-          <p style={{ marginTop: '0.5rem' }}>
-            <a
-              href="https://github.com/prakhrrr04"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                color: '#6b7280',
-                textDecoration: 'none',
-                marginRight: '1rem',
-              }}
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/prakhar-singh-23703628b"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                color: '#6b7280',
-                textDecoration: 'none',
-              }}
-            >
-              LinkedIn
-            </a>
-          </p>
         </footer>
     </div>
   );
