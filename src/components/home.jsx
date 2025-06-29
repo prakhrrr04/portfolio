@@ -120,7 +120,7 @@ export default function Home() {
 
           <div style={{ minWidth: '180px', textAlign: 'center' }}>
             <a
-              href="https://drive.google.com/your_resume_link"
+              href="https://drive.google.com/file/d/1297fB6qQ1odl-teApZ8Uohzl5a_AtUkw/view?usp=drive_link"
               target="_blank"
               rel="noreferrer"
               style={{
