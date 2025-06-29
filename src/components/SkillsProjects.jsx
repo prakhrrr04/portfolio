@@ -36,12 +36,12 @@ export default function SkillsProjects() {
       github: 'https://github.com/prakhrrr04/healstay',
     },
     {
-      title: 'Codeforces Rank Watcher',
+      title: 'Codeforces Rank Notifier',
       description:
         'Chrome extension that alerts you when a friend overtakes your Codeforces rank irrespective of the page you are on.',
       techStack: ['JavaScript', 'Chrome API', 'Codeforces API'],
       icons: [<FaJs />, <FaChrome />, <SiCodeforces />],
-      github: 'https://github.com/prakhrrr04/codeforces-rank-watcher',
+      github: 'https://github.com/prakhrrr04/codeforces-rank-notifier',
     },
     {
       title: 'AI Mentor Chatbot',
@@ -49,7 +49,7 @@ export default function SkillsProjects() {
         'An AI chatbot that provides career and DSA advice to college students using natural language.',
       techStack: ['React', 'Node.js', 'OpenAI API'],
       icons: [<FaReact />, <FaNodeJs />],
-      github: 'https://github.com/prakhrrr04/ai-mentor-chatbot',
+      github: 'https://github.com/prakhrrr04/ai-mentor',
     },
     {
       title: 'Optimized EV Charging Hub',
@@ -57,7 +57,7 @@ export default function SkillsProjects() {
         'Multi-EV charging simulation with LP optimization using solar, grid, and BESS.',
       techStack: ['Python', 'PuLP', 'Matplotlib'],
       icons: [<FaPython />],
-      github: 'https://github.com/prakhrrr04/ev-charging-hub',
+      github: 'https://github.com/prakhrrr04/optimised_EV_Hub',
     },
     {
       title: 'Return Location Optimizer',
@@ -65,7 +65,7 @@ export default function SkillsProjects() {
         'Streamlit dashboard to suggest return hubs based on demand clustering.',
       techStack: ['Streamlit', 'Pandas', 'PyDeck'],
       icons: [<SiPython />],
-      github: 'https://github.com/prakhrrr04/return-optimizer',
+      github: 'https://github.com/prakhrrr04/Walmart_project',
     },
   ];
 

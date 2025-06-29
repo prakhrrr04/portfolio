@@ -260,12 +260,12 @@ export default function Home() {
             {
               title: 'EV Charging Optimizer',
               desc: 'Python + PuLP optimization model to simulate efficient charging schedules for multiple EVs.',
-              link: 'https://github.com/prakhrrr04/ev-charging-hub',
+              link: 'https://github.com/prakhrrr04/optimised_EV_Hub',
             },
             {
-              title: 'Codeforces Rank Watcher',
+              title: 'Codeforces Rank Notifier',
               desc: 'Chrome extension to track friends overtaking your CF rank during live or virtual contests.',
-              link: 'https://github.com/prakhrrr04/codeforces-rank-watcher',
+              link: 'https://github.com/prakhrrr04/codeforces-rank-notifier',
             },
           ].map(({ title, desc, link }) => (
             <div
@@ -325,7 +325,7 @@ export default function Home() {
         >
           Open to internship opportunities, collaborations, or meaningful conversations. Feel free to reach out!
         </p>
-        <a href="/contact"
+        <a href="#/contact"
           style={{
             display: 'inline-block',
             padding: '0.65rem 1.5rem',

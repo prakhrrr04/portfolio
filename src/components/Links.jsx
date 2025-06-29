@@ -20,7 +20,7 @@ export default function Links() {
     {
       name: 'LinkedIn',
       icon: <FaLinkedin size={24} />,
-      url: 'linkedin.com/in/prakhar-singh-23703628b',
+      url: 'https://linkedin.com/in/prakhar-singh-23703628b',
       desc: 'Professional network with detailed academic and project experiences.'
     },
     {
