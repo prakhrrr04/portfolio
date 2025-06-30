@@ -1,16 +1,28 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css'; 
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav style={{ background: '#fff', padding: '1rem 2rem', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-      <div className="container" style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <h2 style={{ fontWeight: 'bold' }}>prakhrrr.dev</h2>
-        <div style={{ display: 'flex', gap: '1.5rem' }}>
-          <Link to="/">Home</Link>
-          <Link to="/skills-projects">Projects</Link>
-          <Link to="/links">Profiles</Link>
-          <Link to="/contact">Contact</Link>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <h2 className="navbar-logo">prakhrrr.dev</h2>
+
+        <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
+          <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/skills-projects" onClick={() => setIsOpen(false)}>Projects</Link>
+          <Link to="/links" onClick={() => setIsOpen(false)}>Profiles</Link>
+          <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
+
+        <button
+          className="navbar-toggle"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
       </div>
     </nav>
   );

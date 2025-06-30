@@ -4,6 +4,9 @@
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .card:hover,
@@ -17,30 +20,14 @@
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
 }
 
-/* @keyframes bounce {
-  0%   { transform: translateY(0); }
-  30%  { transform: translateY(-10px); }
-  50%  { transform: translateY(0); }
-  70%  { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
-} */
-
-
-.skill-glow:hover {
-  box-shadow: 0 0 20px var(--glow-color), 0 0 10px var(--glow-color);
-  border: 1px solid var(--glow-color);
-}
-
-
-
 .skill-glow {
   transition: border 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid transparent;
 }
 
 .skill-glow:hover {
+  box-shadow: 0 0 20px var(--glow-color), 0 0 10px var(--glow-color);
   border-color: var(--glow-color);
-  box-shadow: 0 0 0 2px var(--glow-color);
 }
 
 .loader-container {
@@ -48,6 +35,14 @@
   align-items: center;
   justify-content: center;
   height: 60vh;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 6px solid #ccc;
+  border-top-color: #1f2937;
+  border-radius: 50%;
 }
 
 .scale-on-hover {
@@ -62,25 +57,16 @@
   z-index: 1;
 }
 
-
-.loader {
-  width: 48px;
-  height: 48px;
-  border: 6px solid #ccc;
-  border-top-color: #1f2937;
-  border-radius: 50%;
-}
-
 .grid-two-cols {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .flip-card {
   background-color: transparent;
   width: 100%;
-  height: 180px;
+  height: 200px;
   perspective: 1000px;
 }
 
@@ -99,7 +85,8 @@
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -110,6 +97,7 @@
   align-items: center;
   padding: 1rem;
   border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .flip-card-front {
@@ -154,4 +142,32 @@
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .card,
+  .flip-card {
+    padding: 1rem;
+    height: auto;
+  }
 
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .flip-card-inner {
+    height: auto;
+    min-height: 200px;
+  }
+
+  .flip-card h3 {
+    font-size: 1rem;
+  }
+
+  .flip-card p {
+    font-size: 0.8rem;
+  }
+
+  .loader-container {
+    height: 40vh;
+  }
+}
