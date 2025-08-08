@@ -118,7 +118,7 @@ export default function Home() {
             <li>• Passionate about optimization, DSA, and system design</li>
           </ul>
 
-          <div style={{ minWidth: '180px', textAlign: 'center' }}>
+          {/* <div style={{ minWidth: '180px', textAlign: 'center' }}>
             <a
               href="https://drive.google.com/file/d/1297fB6qQ1odl-teApZ8Uohzl5a_AtUkw/view?usp=sharing"
               target="_blank"
@@ -139,7 +139,7 @@ export default function Home() {
             >
               📄 View My Resume
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
